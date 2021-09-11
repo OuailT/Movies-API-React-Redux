@@ -1,0 +1,12 @@
+.moviesContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-gap: 40px;
+  margin: auto;
+}
