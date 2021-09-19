@@ -1,6 +1,10 @@
 nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
+  padding: 30px 60px 40px 60px;
+}
+
+.logo {
+  font-size: 35px;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
