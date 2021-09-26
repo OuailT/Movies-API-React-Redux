@@ -3,11 +3,12 @@
   width: 380px;
   margin-bottom: 2rem;
   cursor: pointer;
-  background-color: #141c2c;
-  color: #fff;
+  background-color: #e9f4fc;
+  color: #000;
   border-radius: 8px;
   text-align: center;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
   transition: 0.5s;
 }
 
@@ -35,7 +36,7 @@
 
 .image {
   width: 100%;
-  height: 350px;
+  height: 300px;
   border-radius: 8px 8px 0px 0px;
   transition: 0.5s;
 }
@@ -50,9 +51,39 @@ button {
 }
 
 video {
-  width: 100%;
+  width: 380px;
+  height: 300px;
   position: absolute;
   top: 0px;
   left: 0px;
   object-fit: cover;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon {
+  background-color: #38539f;
+  padding: 15px 18px;
+  margin-right: 10px;
+  font-size: 17px;
+  color: #fff;
+}
+
+.btn-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #38539f;
+  padding: 11px 18px;
+}
+
+.btn-icon {
+  font-size: 20px;
+  color: #fff;
 }

@@ -1,10 +1,19 @@
 nav {
   position: relative;
-  padding: 30px 60px 40px 60px;
+  padding: 30px 60px 40px 110px;
+  margin-bottom: 50px;
+  display: flex;
+  background-color: #38539f;
 }
 
 .logo {
-  font-size: 35px;
+  font-size: 25px;
   letter-spacing: 2px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logo-icon {
+  font-size: 30px;
   cursor: pointer;
 }
