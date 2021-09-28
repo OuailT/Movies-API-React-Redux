@@ -6,7 +6,7 @@ import {BiShoppingBag} from "react-icons/bi";
 
 const ImgPath = "https://image.tmdb.org/t/p/w1280";
 
-const SingleMovieCard = ({id , title, poster_path, overview}) => {
+const SingleMovieCard = ({id , title, poster_path, overview, toggleHandler}) => {
     const [selected, isSelected] = useState(null);
     return (
         <article key={id} className="card">
@@ -23,7 +23,7 @@ const SingleMovieCard = ({id , title, poster_path, overview}) => {
                         <FiHeart className="icon"/>
                        <div className="btn-icon-container">
                          <BiShoppingBag className="btn-icon"/>
-                         <button>Buy Ticket</button> 
+                         <button onClick={()=> toggleHandler()}>Buy Ticket</button> 
                        </div>
                    </div>
         </article>
