@@ -1,25 +1,38 @@
-.slide {
+.pop-up-container {
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
-  top: 70px;
+  top: 0;
+  left: 0;
+  bottom: 0;
   right: 0;
   z-index: 999;
-  height: 100vh;
-  width: 500px;
-  color: #ffff;
-  transform: translateX(0);
+  display: none;
 }
 
-.product-details {
-  display: flex;
+.pop-up-container.show {
+  display: block;
+}
+
+.pop-up {
+  background-color: #38539f;
   position: absolute;
-  top: 90px;
-  left: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+  height: 560px;
+  color: #ffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  animation-duration: 1s;
+  animation-name: pop-up-animated;
 }
 
 .img-container {
   width: 200px;
   height: 300px;
-  margin-right: 20px;
+  margin-top: 15px;
 }
 
 img {
@@ -35,6 +48,7 @@ img {
   letter-spacing: 0.5px;
   text-transform: capitalize;
   line-height: 27px;
+  margin-top: 15px;
 }
 
 .quantity {
@@ -66,7 +80,7 @@ img {
 
 .btn-checkout {
   text-align: center;
-  margin-top: 120px;
+  margin-top: 28px;
   border: solid 2px #ffff;
   padding: 8px 12px;
   border-radius: 5px;
@@ -75,4 +89,22 @@ img {
   font-size: 13px;
   letter-spacing: 1px;
   text-transform: capitalize;
+}
+
+.pop-up-close {
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+@keyframes pop-up-animated {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

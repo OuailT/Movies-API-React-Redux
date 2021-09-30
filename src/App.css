@@ -83,11 +83,7 @@ body {
 }
 
 .App {
-  width: 100%;
-}
-
-.App.showClass {
-  transform: translateX(0%);
+  position: relative;
 }
 
 .App .page-wrapper {

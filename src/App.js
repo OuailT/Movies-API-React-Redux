@@ -4,23 +4,19 @@ import Navbar from './Components/Navbar/Navbar';
 import HeroSection from './Components/HeroSection/HeroSection';
 import SlideNav from './Components/SlideNav/SlideNav';
 
-
-// [x] create state to toggle the class buy clicking on the buttons
-// [] create variables with conditions to toggle the class
-// [x] create function to toggle the state from true to false and from false to true
 function App() {
   // Create a state to toggle classes
   const [isToggle, setIsToggle] = useState(false);
 
   //Create a variables to toggle class
-  const showClass = isToggle ? "showClass" : "";
+  const showClass = isToggle ? "show" : ""; 
 
   const toggleHandler = () => setIsToggle(!isToggle);
   return (
-    <main className= {`App ${showClass}`}>
+    <main className= "App" >
       <div className="page-wrapper">
         <Navbar/>
-        <SlideNav/>
+        <SlideNav showClass={showClass} toggleHandler={toggleHandler}/>
         <HeroSection toggleHandler={toggleHandler}/>
       </div>
     </main>

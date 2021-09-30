@@ -39,7 +39,7 @@ useEffect(()=> {
 
     if(isLoading) {
         return (
-            <Loader/>
+            <h1>Loading...</h1>
         )
     } else {
         return (
