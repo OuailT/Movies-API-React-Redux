@@ -2,22 +2,27 @@ import './App.css';
 import { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import HeroSection from './Components/HeroSection/HeroSection';
-import SlideNav from './Components/SlideNav/SlideNav';
+import PopUpMovie from './Components/PopUpMovie/PopUpMovie';
+import Checkout from './Components/Checkout/Checkout';
 
 function App() {
   // Create a state to toggle classes
   const [isToggle, setIsToggle] = useState(false);
+  console.log("hello world");
 
   //Create a variables to toggle class
-  const showClass = isToggle ? "show" : ""; 
+  const showClass = isToggle ? "show" : "";
 
   const toggleHandler = () => setIsToggle(!isToggle);
+
   return (
     <main className= "App" >
+    
       <div className="page-wrapper">
         <Navbar/>
-        <SlideNav showClass={showClass} toggleHandler={toggleHandler}/>
         <HeroSection toggleHandler={toggleHandler}/>
+        <PopUpMovie showClass={showClass} toggleHandler={toggleHandler}/>
+        <Checkout/>
       </div>
     </main>
   );

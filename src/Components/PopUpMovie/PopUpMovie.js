@@ -1,8 +1,11 @@
 import React from 'react';
-import './SlideNav.css'
+import './PopUpMovie.css'
 import {GrClose} from 'react-icons/gr';
+import { useSelector } from 'react-redux';
 
-const SlideNav = ({showClass, toggleHandler, removeClass}) => {
+const PopUpMovie = ({showClass, toggleHandler}) => {
+
+    const moviesList = useSelector((state)=> state.allMovies.movies);
     return (
     <div className={`pop-up-container ${showClass}`}>
        <nav className="pop-up">
@@ -21,9 +24,9 @@ const SlideNav = ({showClass, toggleHandler, removeClass}) => {
                    <button className="btn-checkout">Continue to checkout</button> 
                </div>
            </div>
-       </nav>
+       </nav>}
     </div>
     )
 }
 
-export default SlideNav;
+export default PopUpMovie;

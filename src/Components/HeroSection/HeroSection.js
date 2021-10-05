@@ -13,6 +13,7 @@ const HeroSection = ({toggleHandler}) => {
     const [isLoading, setIsLoading] = useState(true);
     //useSelector to read the state from the store
     const moviesList = useSelector((state)=> state.allMovies.movies);
+    
     const dispatch = useDispatch();
 
 

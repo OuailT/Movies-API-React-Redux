@@ -1,0 +1,15 @@
+.checkout-container {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+}
+
+form {
+  padding: 40px;
+}
+
+.buttons-container .buttons {
+  display: flex;
+  height: 50px;
+  width: 150px;
+}
