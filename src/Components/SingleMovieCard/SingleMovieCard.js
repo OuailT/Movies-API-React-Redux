@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { FiShare2 } from "react-icons/fi";
 import { FiHeart } from "react-icons/fi";
 import { BiShoppingBag } from "react-icons/bi";
+import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 // import './MoviesCardList.css';
 
 const ImgPath = "https://image.tmdb.org/t/p/w1280";
 
-const SingleMovieCard = ({ id, title, poster_path, overview, toggleHandler }) => {
+const SingleMovieCard = ({ id, title, poster_path, overview}) => {
     const [selected, isSelected] = useState(null);
 
     return (
@@ -22,10 +24,12 @@ const SingleMovieCard = ({ id, title, poster_path, overview, toggleHandler }) =>
             <div className="services">
                 <FiShare2 className="icon" />
                 <FiHeart className="icon" />
-                <div className="btn-icon-container">
-                    <BiShoppingBag className="btn-icon" />
-                    <button onClick={() => toggleHandler()}>Buy Ticket</button>
-                </div>
+                <Link to={`/movie/${id}`}>
+                    <div className="btn-icon-container">
+                        <BiShoppingBag className="btn-icon" />
+                        <button >Buy Ticket</button>
+                    </div>
+                </Link>
             </div>
         </article>
     )

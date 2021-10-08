@@ -1,8 +1,12 @@
+.loader-section {
+  position: relative;
+}
+
 .loader-container {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
-  /* transform: translate(60%, 60%); */
+  transform: translate(60%, 60%);
 }
 
 .loader {

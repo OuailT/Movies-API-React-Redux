@@ -9,18 +9,15 @@ import Loader from '../Loader/Loader';
 
 const URL ="https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 
-const HeroSection = ({toggleHandler}) => {
+const HeroSection = () => {
     const [isLoading, setIsLoading] = useState(true);
     //useSelector to read the state from the store
-    const moviesList = useSelector((state)=> state.allMovies.movies);
-    
+    const moviesList = useSelector((state)=> state.allMovies.movies);    
     const dispatch = useDispatch();
-
 
 //fetchData inside use Effect
 useEffect(()=> {
     try {
-        
         const fetchMovie = async () => {
             const response = await axios.get(`${URL}`)
             const data = await response.data;
@@ -31,7 +28,7 @@ useEffect(()=> {
         }
         setTimeout(()=> {
             fetchMovie();
-        }, 3000)
+        }, 1500)
         
     } catch(error) {
         console.log(`ERROR : ${error}`)
@@ -40,13 +37,13 @@ useEffect(()=> {
 
     if(isLoading) {
         return (
-            <h1>Loading...</h1>
+            <Loader/>
         )
     } else {
         return (
             <section className="moviesContainer">
                 <div className="grid-container">
-                    <MoviesCardList toggleHandler={toggleHandler}/>
+                    <MoviesCardList />
                 </div>
             </section>
             )

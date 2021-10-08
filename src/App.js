@@ -2,8 +2,9 @@ import './App.css';
 import { useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import HeroSection from './Components/HeroSection/HeroSection';
-import PopUpMovie from './Components/PopUpMovie/PopUpMovie';
-import Checkout from './Components/Checkout/Checkout';
+import MovieDetails from './Pages/MovieDetails/MovieDetails';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
 
 function App() {
   // Create a state to toggle classes
@@ -17,12 +18,14 @@ function App() {
 
   return (
     <main className= "App" >
-    
       <div className="page-wrapper">
-        <Navbar/>
-        <HeroSection toggleHandler={toggleHandler}/>
-        <PopUpMovie showClass={showClass} toggleHandler={toggleHandler}/>
-        <Checkout/>
+      <Router>
+      <Route> <Navbar/> </Route>
+          <Switch>
+          <Route exact path="/" component={HeroSection}/>
+          <Route path="/movie/:movieId" component={MovieDetails}/>
+          </Switch>
+      </Router>
       </div>
     </main>
   );

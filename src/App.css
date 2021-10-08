@@ -82,10 +82,6 @@ body {
   color: #000;
 }
 
-.App {
-  position: relative;
-}
-
 .App .page-wrapper {
   max-width: 1440px;
   width: 100%;
