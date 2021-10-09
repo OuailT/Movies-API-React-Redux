@@ -3,8 +3,8 @@
   width: 380px;
   margin-bottom: 2rem;
   cursor: pointer;
-  background-color: #e9f4fc;
-  color: #000;
+  background-color: #fff;
+  color: #1f1c3b;
   border-radius: 8px;
   text-align: center;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
@@ -72,19 +72,21 @@ video {
 }
 
 .icon {
-  background-color: #38539f;
+  background: #2d353d;
   padding: 15px 18px;
   margin-right: 10px;
   font-size: 17px;
   color: #fff;
+  border-radius: 5px;
 }
 
 .btn-icon-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #38539f;
+  background: #2d353d;
   padding: 11px 18px;
+  border-radius: 5px;
 }
 
 .btn-icon {

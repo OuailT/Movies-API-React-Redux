@@ -78,12 +78,11 @@ video {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #e9f4fc;
-  color: #000;
+  background-color: #f7f7f7;
+  color: #1f1c3b;
 }
 
 .App .page-wrapper {
-  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 }

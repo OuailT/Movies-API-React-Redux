@@ -8,6 +8,8 @@ const initialState = {
 
 
 // Reducers function takes two arguments state, action
+
+//Movies Reducers
 export const setMoviesReducers = (state = initialState, action) => {
     switch (action.type) {
         case ActionsTypes.SET_MOVIES:
@@ -15,4 +17,17 @@ export const setMoviesReducers = (state = initialState, action) => {
         default:
             return state;
     }
+}
+
+// single Movies Reducers
+export const GetMovieDetailsReducers = (state={}, action) => {
+    switch(action.type) {
+        case ActionsTypes.GET_MOVIE : 
+            return {...state, ...action.payload}
+        case ActionsTypes.REMOVE_MOVIE : 
+            return {};
+        default : 
+            return state
+    }
+    
 }

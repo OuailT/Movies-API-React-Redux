@@ -1,8 +1,11 @@
-nav {
+.navBar-section {
   position: relative;
-  padding: 30px 60px 40px 110px;
+  padding: 30px 150px;
   display: flex;
-  background-color: #38539f;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  height: 90px;
 }
 
 .logo {
@@ -12,7 +15,7 @@ nav {
   font-weight: 600;
 }
 
-.logo-icon {
-  font-size: 30px;
+.icon-bag {
+  color: #2d353d;
   cursor: pointer;
 }

@@ -8,5 +8,7 @@
 
 [] when i click on the bag i want to see all the movies with the total
 
-[] get the value from the URL
-[] fetch the movies using the id of the url
+[x] get the value from the URL
+[x] fetch the movies using the id of the url
+[x] display the data into the the page add to card
+[x] navbar and add the bag
