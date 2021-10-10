@@ -12,3 +12,6 @@
 [x] fetch the movies using the id of the url
 [x] display the data into the the page add to card
 [x] navbar and add the bag
+[x] create a reducers for Quantity
+[x] add the quantity to navbar
+[]  Create clickHandler function to add the quantity and the products

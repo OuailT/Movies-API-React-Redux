@@ -1,6 +1,5 @@
-import React, {useEffect} from 'react'
-import {AiOutlinePlusCircle} from "react-icons/ai"
-import {AiOutlineMinusCircle} from "react-icons/ai"
+import React, {useEffect, useState} from 'react'
+import { Add, Remove } from '@material-ui/icons';
 import './MovieDetails.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams  } from 'react-router';
@@ -11,12 +10,31 @@ import axios from 'axios';
 const ImgPath = "https://image.tmdb.org/t/p/w1280";
 
 const MovieDetails = () => {
+    const [quantity, setQuantity] = useState(1)
     const singleMovie = useSelector((state)=> state.movie);
+    // const quantity = useSelector((state)=> state.quantity);
     const {title, poster_path, overview} = singleMovie;
     const dispatch = useDispatch();
     let {movieId} = useParams();
     console.log(movieId);
 
+    
+    // Handle Click Quantity
+    const handleQuantity = (type) => {
+        if(type === "dec") {
+            quantity > 1 && setQuantity(quantity - 1)
+        } else {
+            setQuantity(quantity + 1)
+        }
+    }
+
+    // add to cart Handler
+    const CartHandler = () => {
+        
+    }
+
+
+    // Get a single Product & Remove product
     useEffect(()=> {
         try {
             const getSingleMovie = async () => {
@@ -50,11 +68,11 @@ const MovieDetails = () => {
                     <h1>{title}</h1>
                     <p>{overview}</p>
                     <div className="quantity-container">
-                        <AiOutlineMinusCircle className="quantity-icon"/>
-                        <input value="1" className="input-quantity"/>
-                        <AiOutlinePlusCircle className="quantity-icon"/>
+                        <Remove className="quantity-icon" onClick={()=> handleQuantity("dec")}/>
+                        <span className="amount">{quantity}</span>
+                        <Add className="quantity-icon" onClick={()=> handleQuantity("incr")}/>
                     </div>
-                    <button className="btn-add">Add To Card</button>
+                    <button className="btn-add" onClick={()=> CartHandler()}>Add To Card</button>
                 </div>
                 
             </div> 

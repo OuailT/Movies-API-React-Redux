@@ -31,3 +31,12 @@ export const GetMovieDetailsReducers = (state={}, action) => {
     }
     
 }
+
+export const movieQuantityReducers = (state = 0 , action) => {
+        switch(action.type) {
+            case ActionsTypes.QUANTITY: 
+               return state + 1;
+            default :  
+               return state;
+        }
+}

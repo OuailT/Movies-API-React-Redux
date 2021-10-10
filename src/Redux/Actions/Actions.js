@@ -26,3 +26,10 @@ export const removeMovie = () => {
         type : ActionsTypes.REMOVE_MOVIE,
     }
 }
+
+
+export const MovieQuantity = () => {
+    return {
+        type : ActionsTypes.QUANTITY
+    }
+}
