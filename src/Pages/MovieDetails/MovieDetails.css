@@ -7,33 +7,25 @@
   height: 100%;
   display: flex;
   padding: 50px;
+  justify-content: space-between;
 }
 
 .img-container {
   flex: 1;
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }
 
 .img-container img {
-  height: 60%;
-  width: 60%;
-  transition: all 0.5s ease;
-  border-radius: 5px;
-}
-
-.img-container img:hover {
-  transform: scale(1.1);
+  height: 78%;
+  width: 80%;
+  object-fit: contain;
 }
 
 .info-container {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
 }

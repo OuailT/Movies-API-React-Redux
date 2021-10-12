@@ -3,7 +3,7 @@ import { Add, Remove } from '@material-ui/icons';
 import './MovieDetails.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams  } from 'react-router';
-import { getMovie, removeMovie } from '../../Redux/Actions/Actions';
+import { getMovie, removeMovie, MovieQuantity } from '../../Redux/Actions/Actions';
 
 import axios from 'axios';
 
@@ -12,7 +12,7 @@ const ImgPath = "https://image.tmdb.org/t/p/w1280";
 const MovieDetails = () => {
     const [quantity, setQuantity] = useState(1)
     const singleMovie = useSelector((state)=> state.movie);
-    // const quantity = useSelector((state)=> state.quantity);
+    const quantityBag = useSelector((state)=> state.quantity);
     const {title, poster_path, overview} = singleMovie;
     const dispatch = useDispatch();
     let {movieId} = useParams();
@@ -30,7 +30,7 @@ const MovieDetails = () => {
 
     // add to cart Handler
     const CartHandler = () => {
-        
+        dispatch(MovieQuantity(quantityBag))
     }
 
 
