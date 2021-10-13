@@ -1,10 +1,11 @@
 import {combineReducers} from "redux";
-import { setMoviesReducers, GetMovieDetailsReducers, movieQuantityReducers} from "./MoviesReducers";
+import { setMoviesReducers, GetMovieDetailsReducers, AddMovieToCart} from "./MoviesReducers";
 
 
 export const reducers = combineReducers({
     allMovies : setMoviesReducers,
     movie : GetMovieDetailsReducers,
-    quantity : movieQuantityReducers,
+    // quantity : movieQuantityReducers,
+    addToCart : AddMovieToCart,
 });
 

@@ -11,7 +11,6 @@ export const setMovies = (movies)=> {
 }
 
 
-
 export const getMovie = (movie) => {
     return {
         type : ActionsTypes.GET_MOVIE,
@@ -19,7 +18,6 @@ export const getMovie = (movie) => {
     }
 
 }
-
 
 export const removeMovie = () => {
     return {
@@ -31,5 +29,17 @@ export const removeMovie = () => {
 export const MovieQuantity = () => {
     return {
         type : ActionsTypes.QUANTITY
+    }
+}
+
+export const TotalMoney = () => {
+    return {
+        type : ActionsTypes.TOTAL_MONEY
+    }
+}
+
+export const AddProduct = () => {
+    return {
+        type : ActionsTypes.ADD_PRODUCT
     }
 }

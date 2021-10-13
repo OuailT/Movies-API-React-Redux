@@ -3,7 +3,7 @@ import { Add, Remove } from '@material-ui/icons';
 import './MovieDetails.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams  } from 'react-router';
-import { getMovie, removeMovie, MovieQuantity } from '../../Redux/Actions/Actions';
+import { getMovie, removeMovie, MovieQuantity} from '../../Redux/Actions/Actions';
 
 import axios from 'axios';
 
@@ -17,6 +17,8 @@ const MovieDetails = () => {
     const dispatch = useDispatch();
     let {movieId} = useParams();
     console.log(movieId);
+
+
 
     
     // Handle Click Quantity
