@@ -4,7 +4,8 @@ import { FiHeart } from "react-icons/fi";
 import { BiShoppingBag } from "react-icons/bi";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
-// import './MoviesCardList.css';
+
+
 
 const ImgPath = "https://image.tmdb.org/t/p/w1280";
 
@@ -27,7 +28,7 @@ const SingleMovieCard = ({ id, title, poster_path, overview}) => {
                 <Link to={`/movie/${id}`}>
                     <div className="btn-icon-container">
                         <BiShoppingBag className="btn-icon" />
-                        <button >Buy Ticket</button>
+                        <button className="buyTicket">Buy Ticket</button>
                     </div>
                 </Link>
             </div>

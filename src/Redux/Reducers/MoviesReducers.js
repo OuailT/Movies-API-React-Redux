@@ -1,7 +1,6 @@
 import { ActionsTypes } from "../Constants/ActionsTypes";
 
 
-
 const initialState = {
     movies: [],
     quantity :0,
@@ -25,24 +24,20 @@ export const GetMovieDetailsReducers = (state={}, action) => {
     switch(action.type) {
         case ActionsTypes.GET_MOVIE : 
             return {...state, ...action.payload}
-        case ActionsTypes.ADD_PRODUCT: 
-            return {...state, ...action.payload,quantity: state.quantity+1}
         case ActionsTypes.REMOVE_MOVIE : 
             return {};
         default : 
-            return state
+            return state;
     }
     
 }
 
-
+// Add to card and Quatity reducers
 export const AddMovieToCart = (state = initialState, action) => {
-        switch(action.type) {
+        switch (action.type) {
             case ActionsTypes.ADD_PRODUCT :
-                return {...state,
-                     quantity: state.quantity+1,
-                     products: [...state.products, action.payload]}
-                default : 
+                return {...state, quantity: state.quantity+1, products:[...state.products,action.payload]};
+            default : 
                 return state;
         }
 

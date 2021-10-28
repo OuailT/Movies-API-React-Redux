@@ -6,6 +6,7 @@
   align-items: center;
   background-color: #fff;
   height: 90px;
+  border: 2px solid #f7f7f7;
 }
 
 .logo-container {
@@ -22,3 +23,4 @@
   color: #2d353d;
   cursor: pointer;
 }
+

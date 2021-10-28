@@ -15,7 +15,7 @@ const Navbar = () => {
                 </div>
             </Link>
 
-            <Badge badgeContent={quantityBag} color="primary">
+            <Badge badgeContent={0} color="primary">
                  <LocalMall className="icon-bag" />
             </Badge>
         </nav>

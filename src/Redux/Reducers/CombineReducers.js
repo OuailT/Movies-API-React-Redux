@@ -5,7 +5,6 @@ import { setMoviesReducers, GetMovieDetailsReducers, AddMovieToCart} from "./Mov
 export const reducers = combineReducers({
     allMovies : setMoviesReducers,
     movie : GetMovieDetailsReducers,
-    // quantity : movieQuantityReducers,
     addToCart : AddMovieToCart,
 });
 

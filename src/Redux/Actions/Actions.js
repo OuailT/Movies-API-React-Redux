@@ -38,8 +38,10 @@ export const TotalMoney = () => {
     }
 }
 
-export const AddProduct = () => {
+export const AddProduct = (singleMovie) => {
     return {
-        type : ActionsTypes.ADD_PRODUCT
+        type : ActionsTypes.ADD_PRODUCT,
+        payload: singleMovie,
     }
 }
+
